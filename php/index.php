@@ -78,7 +78,7 @@ $result = $conn->query($sql);
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>ID.</th>
                 <th>Modelo</th>
                 <th>Marca</th>
                 <th>Tipo</th>

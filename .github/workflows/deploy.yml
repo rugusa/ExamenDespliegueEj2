@@ -25,7 +25,7 @@ jobs:
      - name: Build and push DB Docker image
        run: |
          cd mysql
-         docker build -t ${{ secrets.DOCKER_USERNAME }}/mi_concesionario:v1 .
+         docker build -t ${{ secrets.DOCKER_USERNAME }}/phpconcesionario:v1 .
          docker push ${{ secrets.DOCKER_USERNAME }}/mi_concesionario:v1
 
      # Construir y subir la imagen de la aplicación
