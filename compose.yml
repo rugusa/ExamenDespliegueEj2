@@ -1,0 +1,25 @@
+services:
+  db:
+    image: rugusa/mi_concesionario:v1
+    container_name: contenedorConcesionario
+    ports:
+      - "3306:3306"
+
+  php:
+    image: rugusa/phpconcesionario:v1
+    container_name: contenedorMiConcesionario
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  phpmyadmin:
+     image: phpmyadmin/phpmyadmin:latest
+     container_name: contenedorPhpMyAdmin
+     environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: contrasenyaRoot
+     ports:
+      - "8081:80"
+     depends_on:
+       - db
